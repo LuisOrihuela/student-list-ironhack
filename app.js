@@ -10,9 +10,8 @@ const logger       = require('morgan');
 const path         = require('path');
 const students     =require('./routes/students')
 
-
 mongoose
-  .connect('mongodb://localhost/students', {useNewUrlParser: true})
+  .connect('mongodb+srv://admin:ironhack2019@cluster0-okh16.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
